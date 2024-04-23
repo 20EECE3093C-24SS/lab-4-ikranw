@@ -17,25 +17,25 @@ def test_exact_boundaries():
 
 # TODO-2: Add test_invalid_numerical_score() function
 def test_invalid_numerical_score():
-    with pytest.raises(ValueError) as exc_info:
+    with pytest.raises(ValueError) as error:
         convert_to_letter_grade(-5)
-    assert str(exc_info.value) == "Score must be between 0 and 100."
+    assert str(error.value) == "Score must be between 0 and 100."
 
-    with pytest.raises(ValueError) as exc_info:
+    with pytest.raises(ValueError) as error:
         convert_to_letter_grade(105)
-    assert str(exc_info.value) == "Score must be between 0 and 100."
+    assert str(error.value) == "Score must be between 0 and 100."
 
 # TODO-3: Add test_non_numeric_input() function
 #STRING
 def test_non_numeric_type():
-    with pytest.raises(TypeError) as exc_info:
-        convert_to_letter_grade("score")
-    assert str(exc_info.value) == "Score must be a numeric value."
+    with pytest.raises(TypeError) as error:
+        convert_to_letter_grade("word")
+    assert str(error.value) == "Score must be a numeric value."
 #LIST
-    with pytest.raises(TypeError) as exc_info:
+    with pytest.raises(TypeError) as error:
         convert_to_letter_grade([0, 1, 2])
-    assert str(exc_info.value) == "Score must be a numeric value."
+    assert str(error.value) == "Score must be a numeric value."
 #NONE
-    with pytest.raises(TypeError) as exc_info:
+    with pytest.raises(TypeError) as error:
         convert_to_letter_grade(None)
-    assert str(exc_info.value) == "Score must be a numeric value."
+    assert str(error.value) == "Score must be a numeric value."
