@@ -26,7 +26,7 @@ def test_invalid_numerical_score():
 
 # TODO-3: Add test_non_numeric_input() function
 #STRING
-def test_non_numeric_type():
+def test_non_numeric_input():
     with pytest.raises(TypeError) as error:
         convert_to_letter_grade("word")
     assert str(error.value) == "Score must be a numeric value."
