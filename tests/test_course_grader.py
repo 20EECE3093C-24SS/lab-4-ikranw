@@ -3,7 +3,7 @@ from course_grader import convert_to_letter_grade
 
 
 # TODO-1: Add test_exact_grade_boundaries() function
-def test_exact_grade_boundaries():
+def test_exact_boundaries():
     assert convert_to_letter_grade(0) == 'F'
     assert convert_to_letter_grade(59) == 'F'
     assert convert_to_letter_grade(60) == 'D'
@@ -16,11 +16,11 @@ def test_exact_grade_boundaries():
 
 # TODO-2: Add test_invalid_numerical_score() function
 def test_invalid_numerical_score():
-    with pytest.raises(ValueError) as error:
+    with pytest.raises(valError) as error:
         convert_to_letter_grade(-2)
     assert str(error.value) == "Score must be between 0 and 100."
 
-    with pytest.raises(ValueError) as error:
+    with pytest.raises(valError) as error:
         convert_to_letter_grade(102)
     assert str(error.value) == "Score must be between 0 and 100."
 
