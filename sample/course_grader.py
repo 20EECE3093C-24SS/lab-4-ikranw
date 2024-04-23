@@ -18,7 +18,7 @@ def convert_to_letter_grade(score):
         >>> convert_to_letter_grade(64)
         'D'
     """
-      if not isinstance(score, (int, float)):
+    if not isinstance(score, (int, float)):
         raise TypeError("Score must be a numeric value.")
     if score < 0 or score > 100:
         raise ValueError("Score must be between 0 and 100.")
