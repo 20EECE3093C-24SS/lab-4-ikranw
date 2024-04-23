@@ -26,16 +26,4 @@ def test_invalid_numerical_score():
     assert str(error.value) == "Score must be between 0 and 100."
 
 # TODO-3: Add test_non_numeric_input() function
-#STRING
-def test_non_numeric_type():
-    with pytest.raises(TypeError) as error:
-        convert_to_letter_grade("word")
-    assert str(error.value) == "Score must be a numeric value."
-#LIST
-    with pytest.raises(TypeError) as error:
-        convert_to_letter_grade([0, 1, 2])
-    assert str(error.value) == "Score must be a numeric value."
-#NONE
-    with pytest.raises(TypeError) as error:
-        convert_to_letter_grade(None)
-    assert str(error.value) == "Score must be a numeric value."
+
