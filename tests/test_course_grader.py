@@ -3,7 +3,7 @@ from course_grader import convert_to_letter_grade
 
 
 # TODO-1: Add test_exact_grade_boundaries() function
-def test_exact_boundaries():
+def test_exact_grade_boundaries():
     assert convert_to_letter_grade(0) == 'F'
     assert convert_to_letter_grade(59) == 'F'
     assert convert_to_letter_grade(60) == 'D'
