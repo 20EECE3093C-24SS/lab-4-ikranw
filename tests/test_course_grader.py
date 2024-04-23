@@ -16,11 +16,11 @@ def test_exact_grade_boundaries():
 
 # TODO-2: Add test_invalid_numerical_score() function
 def test_invalid_numerical_score():
-    with pytest.raises(valError) as error:
+    with pytest.raises(ValueError) as error:
         convert_to_letter_grade(-2)
     assert str(error.value) == "Score must be between 0 and 100."
 
-    with pytest.raises(valError) as error:
+    with pytest.raises(ValueError) as error:
         convert_to_letter_grade(102)
     assert str(error.value) == "Score must be between 0 and 100."
 
