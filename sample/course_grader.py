@@ -7,10 +7,10 @@ def convert_to_letter_grade(score):
     Arguments:
         grade's score (int or float): The numerical score of the student.
 
-    Returns:
+    Returns/Output:
        a string: An upper-case string of the student's letter grade based on the argument.
 
-    Raises:
+    Raises/Errors:
         ValueError: If the score is outside the 0 to 100 range.
         TypeError: If the score is not an int or float.
 
