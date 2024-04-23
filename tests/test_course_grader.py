@@ -18,11 +18,11 @@ def test_exact_boundaries():
 # TODO-2: Add test_invalid_numerical_score() function
 def test_invalid_numerical_score():
     with pytest.raises(ValueError) as error:
-        convert_to_letter_grade(-5)
+        convert_to_letter_grade(-2)
     assert str(error.value) == "Score must be between 0 and 100."
 
     with pytest.raises(ValueError) as error:
-        convert_to_letter_grade(105)
+        convert_to_letter_grade(102)
     assert str(error.value) == "Score must be between 0 and 100."
 
 # TODO-3: Add test_non_numeric_input() function
